@@ -1,0 +1,3 @@
+create table inventory (type text, path text, fileName text, size integer, status text, date date, carrier text, format text, grammar text);
+.separator "^"
+.import screen_inv.hsv inventory
