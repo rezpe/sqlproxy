@@ -1,23 +1,24 @@
 ## Overview
 
-    The sqlproxyws project contains a script that exposes the sqlite database stored in example.db.
+The sqlproxyws project contains a script that exposes the sqlite database stored in example.db.
 
 ## Startup
 
-    Before using the service, you need to fill the database in file example.db with values. As an example, run the following command:
+Before using the service, you need to fill the database in file example.db with values. As an example, run the following command:
 
-    ```
-    sqlite3 example.db < Inventorydbcreation
-    ```
+```
+sqlite3 example.db < Inventorydbcreation
+```
 
 ## Api
 
-    The user needs to send the SQL query in the query parameter in the URL. For example:
+The user needs to send the SQL query in the query parameter in the URL. For example:
 
-	http://Host:8090/api/db?query=SELECT * FROM inventory LIMIT 1
+    http://Host:8090/api/db?query=SELECT * FROM inventory LIMIT 1
 
-    The user gets as a response an array of arrays containing the column names. For example:
+The user gets as a response an array of arrays containing the column names. For example:
 
+```JSON
        {
   "result": [
     [
@@ -55,3 +56,4 @@
     ]
   ]
 }
+```
