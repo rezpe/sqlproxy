@@ -6,8 +6,10 @@ from flask import request
 from flask.ext.cors import CORS
 import pandas as pd
 import sqlite3
+import os
 
-conn = sqlite3.connect('example.db')
+currentpath = os.getcwd()
+conn = sqlite3.connect(currentpath+'/example.db')
 app = Flask("sqlproxy")
 api = restful.Api(app)
 cors = CORS(app)
