@@ -8,8 +8,7 @@ import pandas as pd
 import sqlite3
 
 conn = sqlite3.connect('example.db')
-
-app = Flask(__name__)
+app = Flask("sqlproxy")
 api = restful.Api(app)
 cors = CORS(app)
 
@@ -30,5 +29,5 @@ class pandarequest(restful.Resource):
 
 api.add_resource(pandarequest, '/api/db')
 
-if __name__ == '__main__':
+def main():
     app.run(host="0.0.0.0",port=8090)
