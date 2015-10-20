@@ -11,7 +11,8 @@ setup(
   name = 'SimpleSQLProxy',
   packages = ['SimpleSQLProxy'], # this must be the same as the name above
   install_requires=requirements,
-  version = '0.2',
+  scripts=['bin/sqlproxyws'],
+  version = '0.3',
   description = 'A simple sqlproxy for SQL LITE databases based on flask',
   author = 'Sebastien Perez',
   author_email = 'sebastien.perezvasseur@gmail.com',
